@@ -15,23 +15,18 @@ fn input() -> i32 {
 }
 fn main() {
     let playercount = input();
-    let mut gold = false;
     let mut star_player = 0;
     for _ in 0..playercount {
         let score = input();
         let fouls = input();
-        let total_points = score*5 - fouls*3;
-        if total_points>40 {
-            star_player+=1;
+        let total_points = score * 5 - fouls * 3;
+        if total_points > 40 {
+            star_player += 1;
         }
     }
     if star_player == playercount {
-        gold = true;
-    }
-    if gold == true {
         println!("{}+", star_player)
-    }
-    else {
+    } else {
         print!("{}", star_player)
     }
 }
